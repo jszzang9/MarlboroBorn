@@ -1,4 +1,4 @@
-package com.marlboro.model;
+package com.marlboro.core.model;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

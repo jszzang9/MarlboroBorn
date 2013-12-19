@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
 <hibernate-mapping>
-	<class name="com.marlboro.model.dto.Article" table="ARTICLE">
-		<id name="id" column="ID">
-			<generator class="sequence">
-				<param name="sequence">ARTICLE_SEQ</param>
-			</generator>
+	<class name="com.marlboro.core.model.dto.Article" table="MARLBORO">
+		<id name="primaryKey" type="string">
+			<column name="ROW_NAME_KEY" />
 		</id>
-		<property name="title" column="TITLE" />
-		<property name="content" column="CONTENT" />
+		<property name="marlboro_Id" column="MarlboroId" type="string"/>
+		<property name="marlboro_Pw" column="MarlboroPassWd" type="string" />
+		<property name="marlboro_Content" column="MarlboroContent" type="string" />
+	</class>
+	<class name="com.marlboro.core.model.dto.TestData" table="TESTDATA">
+		<id name="primaryKey" type="string">
+			<column name="ROW_NAME_KEY" />
+		</id>
+		<property name="marlboroId" column="MarlboroId" type="string" />
+		<property name="marlboroPw" column="MarlboroPw" type="string" />
+		<property name="marlboroNumber" column="MarlboroNumber" type="string" />
 	</class>
 </hibernate-mapping>
