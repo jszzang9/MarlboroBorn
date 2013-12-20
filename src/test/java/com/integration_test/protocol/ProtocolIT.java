@@ -6,7 +6,7 @@ import java.util.UUID;
 
 import net.sf.json.JSONObject;
 
-public class ProtocolIT {
+public class ProtocolIT{
 	 public static String makeRandomString() {
 			return UUID.randomUUID().toString().replace("-", "");
 		}

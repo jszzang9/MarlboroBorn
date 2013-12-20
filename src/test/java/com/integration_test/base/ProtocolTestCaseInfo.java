@@ -2,7 +2,8 @@ package com.integration_test.base;
 
 public enum ProtocolTestCaseInfo {
 	DUMMY000(false),
-	TEST0001(true),
+	TEST0001(true),	TEST0002(true),	TEST0003(true),
+	
 	;
 	
 	private boolean isExistParam;

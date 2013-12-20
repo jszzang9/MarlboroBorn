@@ -1,19 +1,25 @@
 package com.marlboro.core.model;
 
+import org.apache.log4j.Level;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+import com.marlboro.util.QueuedLogger.QueuedTransactionLogs;
+
 public class HibernateUtil {
-	public static final SessionFactory sessionFactory;
+	private static final SessionFactory sessionFactory;
 	
 	static {
 		try {
 			sessionFactory = new Configuration().configure().buildSessionFactory();
 		}
 		catch (Throwable ex) {
-			System.out.println("Initial SessionFactory creation failed." + ex);
+			QueuedTransactionLogs logs = new QueuedTransactionLogs();
+			logs.add(Level.INFO, "======================================");
+			logs.add(Level.FATAL, "fail to initialize Hibernate SessionFactory" + ex);
+			logs.add(Level.INFO, "======================================");
 			throw new ExceptionInInitializerError(ex);
 		}
 	}

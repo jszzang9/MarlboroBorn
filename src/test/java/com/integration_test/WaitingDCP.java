@@ -6,11 +6,11 @@ import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 
-import com.integration_test.protocol.TestDataIT;
+import com.integration_test.protocol.ProtocolSendTestDataIT;
 import com.marlboro.MarlboroBorn;
 
 
-public class WaitingDCP {
+public class WaitingDCP extends ProtocolSendTestDataIT{
 	
 	public static void main(String[] list) throws Exception {
 		System.out.println("");
@@ -75,7 +75,7 @@ public class WaitingDCP {
 		System.out.println("--------------------------------------");
 		System.out.println("");
 		
-		TestDataIT tt =new TestDataIT();
-		tt.success();
+		
 	}
+
 }
