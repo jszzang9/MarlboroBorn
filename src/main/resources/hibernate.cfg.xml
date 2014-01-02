@@ -13,7 +13,6 @@
         <property name="current_session_context_class">thread</property>
         
         <mapping resource="hdm/hibernate.hbm.xml"></mapping>
-        
     </session-factory>
 </hibernate-configuration>
 

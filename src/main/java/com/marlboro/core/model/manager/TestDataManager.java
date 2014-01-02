@@ -1,13 +1,10 @@
 package com.marlboro.core.model.manager;
 
-import org.apache.log4j.Level;
 import org.hibernate.Session;
 
 import com.marlboro.core.model.HibernateUtil;
 import com.marlboro.core.model.dto.TestData;
 import com.marlboro.util.Generator;
-import com.marlboro.util.QueuedLogger.QueuedLogger;
-import com.marlboro.util.QueuedLogger.QueuedTransactionLogs;
 
 public class TestDataManager {
 
